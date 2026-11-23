@@ -97,7 +97,7 @@ tfoot td{font-weight:700;color:var(--gold)}
 .tb{display:flex;gap:6px;margin:8px 0}
 .tb button{background:var(--inp);color:var(--gold);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:15px;font-family:inherit}
 canvas.sig{width:100%;height:140px;background:#fff;border-radius:10px;touch-action:none;display:block}
-.demo{background:#3a2a00;color:#f1d77a;text-align:center;font-size:12px;padding:4px}
+.demo{background:#7a1010;color:#fff;text-align:center;font-size:13px;font-weight:700;padding:6px 8px;line-height:1.5}
 #printArea{display:none}
 @media print{
  body>*:not(#printArea){display:none!important}
@@ -123,7 +123,7 @@ canvas.sig{width:100%;height:140px;background:#fff;border-radius:10px;touch-acti
 </style>
 </head>
 <body>
-<div class="demo" id="demoBar" hidden>نسخة تجريبية ببيانات وهمية - لا تُدخل بيانات قضايا حقيقية قبل اعتماد التأمين</div>
+<div class="demo" id="demoBar">نموذج تجريبي غير رسمي، ليس نظامًا رسميًا للنيابة الإدارية. لا تُدخل قضايا أو بيانات حقيقية، فالبيانات وهمية للتجربة فقط.</div>
 <header><button class="back" id="backBtn" hidden>رجوع ›</button><img class="lg" id="hlogo" alt=""><h1>النيابة الإدارية - المستشار محمد صلاح الدين فايز</h1></header>
 <main id="app"></main>
 <div id="printArea"></div>
@@ -159,7 +159,7 @@ const app=document.getElementById('app');
 function render(){
  {const t=(S.settings&&S.settings.theme)||'logo';document.documentElement.dataset.theme=t==='dark'?'':t;}document.getElementById('hlogo').src=DEFAULT_LOGO;
  document.getElementById('backBtn').hidden=nav.length<2;
- document.getElementById('demoBar').hidden=!S.demo;
+ 
  const n=cur();const f=views[n.v];app.innerHTML='';f(n);window.scrollTo(0,0);
 }
 const views={};
